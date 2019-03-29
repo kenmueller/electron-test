@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Electron test</title>
+	</head>
+	<body>
+		<h1>Enter message</h1>
+		<input type="text" id="message">
+		<button onclick="showMessage()">Show message</button>
+		<script>
+			const { ipcRenderer } = require('electron')
+
+			function showMessage() {
+				ipcRenderer.send('message:send', document.getElementById('message').value)
+			}
+		</script>
+	</body>
+</html>

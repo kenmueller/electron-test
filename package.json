@@ -1,0 +1,14 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "Electron test",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ken Mueller",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.1.3"
+  }
+}

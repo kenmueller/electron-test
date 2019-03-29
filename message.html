@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1 id="message"></h1>
+		<script>
+			const { ipcRenderer } = require('electron')
+
+			ipcRenderer.on('message:send', function(event, message) {
+				document.getElementById('message').innerHTML = message
+			})
+		</script>
+	</body>
+</html>
